@@ -1,0 +1,11 @@
+#minor changes for lab to suit colab running conditions (25 Jun 2025)
+
+!pip install tensorflow 
+# not needed ==2.80
+
+model.compile(loss='categorical_crossentropy',
+                  optimizer= optimizers.Adam(learning_rate=learning_rate),metrics=['accuracy'])
+# replace lr=learning_rate by learning_rate=learning_rate
+
+model.save_weights(data_dir_path+'custom_try.weights.h5') # Saving the compile weights
+# replace custom_try.h5 by custom_try.weights.h5 
